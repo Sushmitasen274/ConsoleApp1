@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="8c283118-3d9b-4148-9b90-ce800ebf6aa3" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://192.168.4.9:2020/ERPService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="ERPService13.xsd" MetadataType="Schema" ID="cd68281a-cc7e-4386-942a-87c132678051" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd2" />
+    <MetadataFile FileName="ERPService14.xsd" MetadataType="Schema" ID="afcb6d77-3202-48bd-86a5-658535d967a7" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd6" />
+    <MetadataFile FileName="ERPService15.xsd" MetadataType="Schema" ID="f965768c-812f-4b18-ac12-46eb065dd5c0" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd0" />
+    <MetadataFile FileName="ERPService16.xsd" MetadataType="Schema" ID="adbaab89-52d6-471b-94c9-03bd8bed4f3c" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd5" />
+    <MetadataFile FileName="ERPService17.xsd" MetadataType="Schema" ID="ebd42faf-de62-4aba-91e1-a4b06df56e69" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd4" />
+    <MetadataFile FileName="ERPService1.wsdl" MetadataType="Wsdl" ID="263880d8-14f4-4c3e-b253-146a7d4a6317" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?wsdl" />
+    <MetadataFile FileName="ERPService2.disco" MetadataType="Disco" ID="05c2f2ff-77bb-47b9-8452-dfe21212751a" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?disco" />
+    <MetadataFile FileName="ERPService18.xsd" MetadataType="Schema" ID="428ff5af-2c24-4c5f-8a5f-72577afb29d9" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd1" />
+    <MetadataFile FileName="ERPService19.xsd" MetadataType="Schema" ID="2280b443-889c-4312-8e17-d6cf7845387e" SourceId="1" SourceUrl="http://192.168.4.9:2020/ERPService.svc?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

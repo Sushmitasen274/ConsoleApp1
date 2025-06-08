@@ -1,0 +1,984 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="ERPService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/System.Data" />
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd4" />
+      <xsd:import schemaLocation="http://192.168.6.18:2006/ERPService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/IIITS.ERPService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IERPService_GetPurchaseOrderDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPurchaseOrderDetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetPurchaseOrderDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPurchaseOrderDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CreateJVTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJVTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CreateJVTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJVTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_ValidateJVCreation_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateJVCreation" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_ValidateJVCreation_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidateJVCreationResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateJVSuccessStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJVSuccessStatus" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateJVSuccessStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateJVSuccessStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForCRegister_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForCRegister" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForCRegister_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForCRegisterResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWOItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWOItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetCollectionSource_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectionSource" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetCollectionSource_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetCollectionSourceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAccountCodeFromERP_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCodeFromERP" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAccountCodeFromERP_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCodeFromERPResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure22AB_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure22AB" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure22AB_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure22ABResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure22ABCircle_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure22ABCircle" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure22ABCircle_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure22ABCircleResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure40A_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure40A" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure40A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure40AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure40B_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure40B" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure40B_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure40BResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure30_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure30" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure30_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure30Response" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure30A_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure30A" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAnnexure30A_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAnnexure30AResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetBudgetAccountCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetAccountCode" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetBudgetAccountCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetBudgetAccountCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetSchemes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemes" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetSchemes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetSchemesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetProjects_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjects" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetProjects_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetProjectsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetActivityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCode" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetActivityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetActivityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetVendor_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendor" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetVendor_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetVendorResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetLCBGRefID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLCBGRefID" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetLCBGRefID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLCBGRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetInsurenceRefID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsurenceRefID" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetInsurenceRefID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInsurenceRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetLCBGInsurenceRefID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLCBGInsurenceRefID" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetLCBGInsurenceRefID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLCBGInsurenceRefIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAccountCodeAndActivityCode_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCodeAndActivityCode" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAccountCodeAndActivityCode_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAccountCodeAndActivityCodeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetMasterForEstimate_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterForEstimate" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetMasterForEstimate_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetMasterForEstimateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckForBudgetLimit_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForBudgetLimit" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckForBudgetLimit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckForBudgetLimitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetFMSUserDetail_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFMSUserDetail" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetFMSUserDetail_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFMSUserDetailResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsAfterCR_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsAfterCR" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsAfterCR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsAfterCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetPOItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetPOItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPOItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetItemDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemDetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetItemDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetItemDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForCRegisterAbstract_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForCRegisterAbstract" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForCRegisterAbstract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForCRegisterAbstractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODataForCWIPReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODataForCWIPReport" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODataForCWIPReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODataForCWIPReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForReports_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForReports" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODetailsForReports_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODetailsForReportsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWOAfterCR_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOAfterCR" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWOAfterCR_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWOAfterCRResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckReleaseEntry_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckReleaseEntry" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckReleaseEntry_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckReleaseEntryResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetReturnedDownValues_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReturnedDownValues" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetReturnedDownValues_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReturnedDownValuesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetReleaseQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetReleaseQty" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetReleaseQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetReleaseQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateAssetReleaseStatus_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAssetReleaseStatus" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateAssetReleaseStatus_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateAssetReleaseStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_RejectJVTransaction_InputMessage">
+    <wsdl:part name="parameters" element="tns:RejectJVTransaction" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_RejectJVTransaction_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RejectJVTransactionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_SaveWDVValuesinMMS_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWDVValuesinMMS" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_SaveWDVValuesinMMS_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveWDVValuesinMMSResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckOBMMSWorkOrderExist_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOBMMSWorkOrderExist" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckOBMMSWorkOrderExist_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckOBMMSWorkOrderExistResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_BillRegisterSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:BillRegisterSave" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_BillRegisterSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BillRegisterSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAssetAccountCodes_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetAccountCodes" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetAssetAccountCodes_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAssetAccountCodesResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_TTKWorkorderSave_InputMessage">
+    <wsdl:part name="parameters" element="tns:TTKWorkorderSave" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_TTKWorkorderSave_OutputMessage">
+    <wsdl:part name="parameters" element="tns:TTKWorkorderSaveResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_FetchWorkDetails_InputMessage">
+    <wsdl:part name="parameters" element="tns:FetchWorkDetails" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_FetchWorkDetails_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FetchWorkDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckFaultContract_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFaultContract" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckFaultContract_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckFaultContractResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CheckFaultContract_MyExceptionFault_FaultMessage">
+    <wsdl:part xmlns:q1="http://schemas.datacontract.org/2004/07/IIITS.ERPService" name="detail" element="q1:MyException" />
+  </wsdl:message>
+  <wsdl:message name="UserLogin">
+    <wsdl:part name="parameters" element="tns:UserLogin" />
+  </wsdl:message>
+  <wsdl:message name="UserLogin_Headers">
+    <wsdl:part name="Token" element="tns:Token" />
+  </wsdl:message>
+  <wsdl:message name="UserLoginSuccess">
+    <wsdl:part name="parameters" element="tns:UserLoginSuccess" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODataForCWIPSummaryReport_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODataForCWIPSummaryReport" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_GetWODataForCWIPSummaryReport_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWODataForCWIPSummaryReportResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateATDetials_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATDetials" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_UpdateATDetials_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateATDetialsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CreateJVTransactionCWIPTransfer_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJVTransactionCWIPTransfer" />
+  </wsdl:message>
+  <wsdl:message name="IERPService_CreateJVTransactionCWIPTransfer_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateJVTransactionCWIPTransferResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IERPService">
+    <wsdl:operation name="GetPurchaseOrderDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetPurchaseOrderDetails" message="tns:IERPService_GetPurchaseOrderDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetPurchaseOrderDetailsResponse" message="tns:IERPService_GetPurchaseOrderDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJVTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CreateJVTransaction" message="tns:IERPService_CreateJVTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CreateJVTransactionResponse" message="tns:IERPService_CreateJVTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidateJVCreation">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/ValidateJVCreation" message="tns:IERPService_ValidateJVCreation_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/ValidateJVCreationResponse" message="tns:IERPService_ValidateJVCreation_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJVSuccessStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/UpdateJVSuccessStatus" message="tns:IERPService_UpdateJVSuccessStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/UpdateJVSuccessStatusResponse" message="tns:IERPService_UpdateJVSuccessStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODetails" message="tns:IERPService_GetWODetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODetailsResponse" message="tns:IERPService_GetWODetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForCRegister">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForCRegister" message="tns:IERPService_GetWODetailsForCRegister_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForCRegisterResponse" message="tns:IERPService_GetWODetailsForCRegister_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOItemDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWOItemDetails" message="tns:IERPService_GetWOItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWOItemDetailsResponse" message="tns:IERPService_GetWOItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionSource">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetCollectionSource" message="tns:IERPService_GetCollectionSource_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetCollectionSourceResponse" message="tns:IERPService_GetCollectionSource_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCodeFromERP">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAccountCodeFromERP" message="tns:IERPService_GetAccountCodeFromERP_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAccountCodeFromERPResponse" message="tns:IERPService_GetAccountCodeFromERP_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure22AB">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure22AB" message="tns:IERPService_GetAnnexure22AB_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure22ABResponse" message="tns:IERPService_GetAnnexure22AB_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure22ABCircle">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure22ABCircle" message="tns:IERPService_GetAnnexure22ABCircle_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure22ABCircleResponse" message="tns:IERPService_GetAnnexure22ABCircle_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure40A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure40A" message="tns:IERPService_GetAnnexure40A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure40AResponse" message="tns:IERPService_GetAnnexure40A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure40B">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure40B" message="tns:IERPService_GetAnnexure40B_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure40BResponse" message="tns:IERPService_GetAnnexure40B_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure30">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure30" message="tns:IERPService_GetAnnexure30_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure30Response" message="tns:IERPService_GetAnnexure30_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure30A">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAnnexure30A" message="tns:IERPService_GetAnnexure30A_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAnnexure30AResponse" message="tns:IERPService_GetAnnexure30A_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBudgetAccountCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetBudgetAccountCode" message="tns:IERPService_GetBudgetAccountCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetBudgetAccountCodeResponse" message="tns:IERPService_GetBudgetAccountCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetSchemes" message="tns:IERPService_GetSchemes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetSchemesResponse" message="tns:IERPService_GetSchemes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetProjects" message="tns:IERPService_GetProjects_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetProjectsResponse" message="tns:IERPService_GetProjects_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetActivityCode" message="tns:IERPService_GetActivityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetActivityCodeResponse" message="tns:IERPService_GetActivityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetVendor">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetVendor" message="tns:IERPService_GetVendor_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetVendorResponse" message="tns:IERPService_GetVendor_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLCBGRefID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetLCBGRefID" message="tns:IERPService_GetLCBGRefID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetLCBGRefIDResponse" message="tns:IERPService_GetLCBGRefID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInsurenceRefID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetInsurenceRefID" message="tns:IERPService_GetInsurenceRefID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetInsurenceRefIDResponse" message="tns:IERPService_GetInsurenceRefID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLCBGInsurenceRefID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetLCBGInsurenceRefID" message="tns:IERPService_GetLCBGInsurenceRefID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetLCBGInsurenceRefIDResponse" message="tns:IERPService_GetLCBGInsurenceRefID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCodeAndActivityCode">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAccountCodeAndActivityCode" message="tns:IERPService_GetAccountCodeAndActivityCode_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAccountCodeAndActivityCodeResponse" message="tns:IERPService_GetAccountCodeAndActivityCode_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterForEstimate">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetMasterForEstimate" message="tns:IERPService_GetMasterForEstimate_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetMasterForEstimateResponse" message="tns:IERPService_GetMasterForEstimate_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckForBudgetLimit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CheckForBudgetLimit" message="tns:IERPService_CheckForBudgetLimit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CheckForBudgetLimitResponse" message="tns:IERPService_CheckForBudgetLimit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFMSUserDetail">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetFMSUserDetail" message="tns:IERPService_GetFMSUserDetail_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetFMSUserDetailResponse" message="tns:IERPService_GetFMSUserDetail_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsAfterCR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODetailsAfterCR" message="tns:IERPService_GetWODetailsAfterCR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODetailsAfterCRResponse" message="tns:IERPService_GetWODetailsAfterCR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPOItemDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetPOItemDetails" message="tns:IERPService_GetPOItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetPOItemDetailsResponse" message="tns:IERPService_GetPOItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetItemDetails" message="tns:IERPService_GetItemDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetItemDetailsResponse" message="tns:IERPService_GetItemDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForCRegisterAbstract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForCRegisterAbstract" message="tns:IERPService_GetWODetailsForCRegisterAbstract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForCRegisterAbstractResponse" message="tns:IERPService_GetWODetailsForCRegisterAbstract_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODataForCWIPReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODataForCWIPReport" message="tns:IERPService_GetWODataForCWIPReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODataForCWIPReportResponse" message="tns:IERPService_GetWODataForCWIPReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForReports">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForReports" message="tns:IERPService_GetWODetailsForReports_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODetailsForReportsResponse" message="tns:IERPService_GetWODetailsForReports_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWOAfterCR">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWOAfterCR" message="tns:IERPService_GetWOAfterCR_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWOAfterCRResponse" message="tns:IERPService_GetWOAfterCR_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckReleaseEntry">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CheckReleaseEntry" message="tns:IERPService_CheckReleaseEntry_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CheckReleaseEntryResponse" message="tns:IERPService_CheckReleaseEntry_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedDownValues">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetReturnedDownValues" message="tns:IERPService_GetReturnedDownValues_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetReturnedDownValuesResponse" message="tns:IERPService_GetReturnedDownValues_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetReleaseQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetReleaseQty" message="tns:IERPService_GetReleaseQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetReleaseQtyResponse" message="tns:IERPService_GetReleaseQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetReleaseStatus">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/UpdateAssetReleaseStatus" message="tns:IERPService_UpdateAssetReleaseStatus_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/UpdateAssetReleaseStatusResponse" message="tns:IERPService_UpdateAssetReleaseStatus_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RejectJVTransaction">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/RejectJVTransaction" message="tns:IERPService_RejectJVTransaction_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/RejectJVTransactionResponse" message="tns:IERPService_RejectJVTransaction_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveWDVValuesinMMS">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/SaveWDVValuesinMMS" message="tns:IERPService_SaveWDVValuesinMMS_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/SaveWDVValuesinMMSResponse" message="tns:IERPService_SaveWDVValuesinMMS_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckOBMMSWorkOrderExist">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CheckOBMMSWorkOrderExist" message="tns:IERPService_CheckOBMMSWorkOrderExist_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CheckOBMMSWorkOrderExistResponse" message="tns:IERPService_CheckOBMMSWorkOrderExist_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BillRegisterSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/BillRegisterSave" message="tns:IERPService_BillRegisterSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/BillRegisterSaveResponse" message="tns:IERPService_BillRegisterSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetAccountCodes">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetAssetAccountCodes" message="tns:IERPService_GetAssetAccountCodes_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetAssetAccountCodesResponse" message="tns:IERPService_GetAssetAccountCodes_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="TTKWorkorderSave">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/TTKWorkorderSave" message="tns:IERPService_TTKWorkorderSave_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/TTKWorkorderSaveResponse" message="tns:IERPService_TTKWorkorderSave_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FetchWorkDetails">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/FetchWorkDetails" message="tns:IERPService_FetchWorkDetails_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/FetchWorkDetailsResponse" message="tns:IERPService_FetchWorkDetails_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckFaultContract">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CheckFaultContract" message="tns:IERPService_CheckFaultContract_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CheckFaultContractResponse" message="tns:IERPService_CheckFaultContract_OutputMessage" />
+      <wsdl:fault wsaw:Action="http://tempuri.org/IERPService/CheckFaultContractMyExceptionFault" name="MyExceptionFault" message="tns:IERPService_CheckFaultContract_MyExceptionFault_FaultMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/LoginUser" name="UserLogin" message="tns:UserLogin" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/LoginUserResponse" name="UserLoginSuccess" message="tns:UserLoginSuccess" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWODataForCWIPSummaryReport">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/GetWODataForCWIPSummaryReport" message="tns:IERPService_GetWODataForCWIPSummaryReport_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/GetWODataForCWIPSummaryReportResponse" message="tns:IERPService_GetWODataForCWIPSummaryReport_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATDetials">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/UpdateATDetials" message="tns:IERPService_UpdateATDetials_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/UpdateATDetialsResponse" message="tns:IERPService_UpdateATDetials_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateJVTransactionCWIPTransfer">
+      <wsdl:input wsaw:Action="http://tempuri.org/IERPService/CreateJVTransactionCWIPTransfer" message="tns:IERPService_CreateJVTransactionCWIPTransfer_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IERPService/CreateJVTransactionCWIPTransferResponse" message="tns:IERPService_CreateJVTransactionCWIPTransfer_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IERPService" type="tns:IERPService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPurchaseOrderDetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetPurchaseOrderDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJVTransaction">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CreateJVTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidateJVCreation">
+      <soap:operation soapAction="http://tempuri.org/IERPService/ValidateJVCreation" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateJVSuccessStatus">
+      <soap:operation soapAction="http://tempuri.org/IERPService/UpdateJVSuccessStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForCRegister">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODetailsForCRegister" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOItemDetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWOItemDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCollectionSource">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetCollectionSource" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCodeFromERP">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAccountCodeFromERP" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure22AB">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure22AB" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure22ABCircle">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure22ABCircle" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure40A">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure40A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure40B">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure40B" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure30">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure30" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAnnexure30A">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAnnexure30A" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBudgetAccountCode">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetBudgetAccountCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetSchemes">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetSchemes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProjects">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetProjects" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetActivityCode">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetActivityCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetVendor">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetVendor" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLCBGRefID">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetLCBGRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInsurenceRefID">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetInsurenceRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLCBGInsurenceRefID">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetLCBGInsurenceRefID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAccountCodeAndActivityCode">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAccountCodeAndActivityCode" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetMasterForEstimate">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetMasterForEstimate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckForBudgetLimit">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CheckForBudgetLimit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFMSUserDetail">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetFMSUserDetail" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsAfterCR">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODetailsAfterCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPOItemDetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetPOItemDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetItemDetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetItemDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForCRegisterAbstract">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODetailsForCRegisterAbstract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODataForCWIPReport">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODataForCWIPReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODetailsForReports">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODetailsForReports" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWOAfterCR">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWOAfterCR" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckReleaseEntry">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CheckReleaseEntry" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReturnedDownValues">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetReturnedDownValues" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetReleaseQty">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetReleaseQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateAssetReleaseStatus">
+      <soap:operation soapAction="http://tempuri.org/IERPService/UpdateAssetReleaseStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RejectJVTransaction">
+      <soap:operation soapAction="http://tempuri.org/IERPService/RejectJVTransaction" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveWDVValuesinMMS">
+      <soap:operation soapAction="http://tempuri.org/IERPService/SaveWDVValuesinMMS" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckOBMMSWorkOrderExist">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CheckOBMMSWorkOrderExist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BillRegisterSave">
+      <soap:operation soapAction="http://tempuri.org/IERPService/BillRegisterSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAssetAccountCodes">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetAssetAccountCodes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="TTKWorkorderSave">
+      <soap:operation soapAction="http://tempuri.org/IERPService/TTKWorkorderSave" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FetchWorkDetails">
+      <soap:operation soapAction="http://tempuri.org/IERPService/FetchWorkDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckFaultContract">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CheckFaultContract" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="MyExceptionFault">
+        <soap:fault use="literal" name="MyExceptionFault" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="LoginUser">
+      <soap:operation soapAction="http://tempuri.org/IERPService/LoginUser" style="document" />
+      <wsdl:input name="UserLogin">
+        <soap:header message="tns:UserLogin_Headers" part="Token" use="literal" />
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="UserLoginSuccess">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWODataForCWIPSummaryReport">
+      <soap:operation soapAction="http://tempuri.org/IERPService/GetWODataForCWIPSummaryReport" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateATDetials">
+      <soap:operation soapAction="http://tempuri.org/IERPService/UpdateATDetials" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateJVTransactionCWIPTransfer">
+      <soap:operation soapAction="http://tempuri.org/IERPService/CreateJVTransactionCWIPTransfer" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ERPService">
+    <wsdl:port name="BasicHttpBinding_IERPService" binding="tns:BasicHttpBinding_IERPService">
+      <soap:address location="http://192.168.6.18:2006/ERPService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

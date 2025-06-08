@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/IIITS.ERP.BL" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/IIITS.ERP.BL" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="clsUser">
+    <xs:complexContent mixed="false">
+      <xs:extension base="tns:AppException">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Designation" type="xs:int" />
+          <xs:element minOccurs="0" name="EmployeeId" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Location" type="xs:int" />
+          <xs:element minOccurs="0" name="LoginName" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Mail" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="MobileNo" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Role" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_ACTDCTON" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_ACTDCTREMARKS" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_ANSWER" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_COMPID" type="xs:int" />
+          <xs:element minOccurs="0" name="USR_CRBY" type="xs:int" />
+          <xs:element minOccurs="0" name="USR_ID" type="xs:int" />
+          <xs:element minOccurs="0" name="USR_PSWD" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_ProfileImage" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="USR_QUESTION" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" name="crby" type="xs:int" />
+          <xs:element minOccurs="0" name="usrQuestionToBind" nillable="true" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="clsUser" nillable="true" type="tns:clsUser" />
+  <xs:complexType name="AppException">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="AppException" nillable="true" type="tns:AppException" />
+</xs:schema>
